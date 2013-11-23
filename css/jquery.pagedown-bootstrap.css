@@ -21,39 +21,44 @@
   padding: 0 0 5px;
   width: 100%;
 }
-.icon-link,
-.icon-blockquote,
-.icon-code,
-.icon-bullet-list,
-.icon-list,
-.icon-header,
-.icon-hr-line,
-.icon-undo {
-  background-image: url(../img/Markdown.Editor.Icons.png);
+/*.icon-link,*/
+.glyphicon-blockquote,
+.glyphicon-code,
+.glyphicon-bullet-list,
+.glyphicon-numbered-list,
+/*.glyphicon-header,*/
+.glyphicon-hr-line,
+.glyphicon-undo,
+.glyphicon-redo {
+  height: 13px;
+  background-image: url(../img/Markdown.Editor.Icons_white.png);
 }
-.icon-link {
+/*.icon-link {
   background-position: 0      0;
-}
-.icon-blockquote {
+}*/
+.glyphicon-blockquote {
   background-position: -24px 0;
 }
-.icon-code {
+.glyphicon-code {
   background-position: -48px 0;
 }
-.icon-bullet-list {
+.glyphicon-bullet-list {
   background-position: -72px 0;
 }
-.icon-list {
+.glyphicon-numbered-list {
   background-position: -96px 0;
 }
-.icon-header {
+/*.glyphicon-header {
   background-position: -120px 0;
-}
-.icon-hr-line {
+}*/
+.glyphicon-hr-line {
   background-position: -144px 0;
 }
-.icon-undo {
-  background-position: -168px 0;
+.glyphicon-undo {
+  background-position: -168px -1px;
+}
+.glyphicon-redo {
+  background-position: -190px -1px;
 }
 .wmd-prompt-background {
   background-color: Black;

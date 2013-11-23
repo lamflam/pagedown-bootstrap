@@ -1333,9 +1333,9 @@
 
 			var makeButton = function (id, title, icon, textOp, group) {
 				var button = document.createElement("button");
-				button.className = "btn";
+				button.className = "btn btn-default btn-sm";
 				var buttonImage = document.createElement("i");
-				buttonImage.className = icon;
+				buttonImage.className = "glyphicon glyph" + icon;
 				button.id = id + postfix;
 				button.appendChild(buttonImage);
 				button.title = title;
@@ -1373,7 +1373,7 @@
 			}), group2);
 
 			group3 = makeGroup(3);
-			buttons.olist = makeButton("wmd-olist-button", "Numbered List - Ctrl+O", "icon-list", bindCommand(function (chunk, postProcessing) {
+			buttons.olist = makeButton("wmd-olist-button", "Numbered List - Ctrl+O", "icon-numbered-list", bindCommand(function (chunk, postProcessing) {
 				this.doList(chunk, postProcessing, true);
 			}), group3);
 			buttons.ulist = makeButton("wmd-ulist-button", "Bulleted List - Ctrl+U", "icon-bullet-list", bindCommand(function (chunk, postProcessing) {
@@ -1390,7 +1390,7 @@
 				"Redo - Ctrl+Y" :
 				"Redo - Ctrl+Shift+Z"; // mac and other non-Windows platforms
 
-			buttons.redo = makeButton("wmd-redo-button", redoTitle, "icon-share-alt", null, group4);
+			buttons.redo = makeButton("wmd-redo-button", redoTitle, "icon-redo", null, group4);
 			buttons.redo.execute = function (manager) { if (manager) manager.redo(); };
 
 			if (helpOptions) {
@@ -1398,9 +1398,9 @@
 				group5.className = group5.className + " pull-right";
 				var helpButton = document.createElement("button");
 				var helpButtonImage = document.createElement("i");
-				helpButtonImage.className = "icon-question-sign";
+				helpButtonImage.className = "glyphicon glyphicon-question-sign";
 				helpButton.appendChild(helpButtonImage);
-				helpButton.className = "btn";
+				helpButton.className = "btn btn-default btn-sm";
 				helpButton.id = "wmd-help-button" + postfix;
 				helpButton.isHelp = true;
 				helpButton.title = helpOptions.title || defaultHelpHoverTitle;
